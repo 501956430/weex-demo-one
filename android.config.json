@@ -1,0 +1,6 @@
+{
+  "AppName":"WeexTest",
+  "AppId":"com.alibaba.weex",
+  "SplashText":"Hello\nWeex",
+  "WeexBundle":"tabbar.js"
+}
