@@ -1,0 +1,162 @@
+<template>
+    <div class="wrapper">
+        <wxc-navpage title="{{title}}" background-color="#3683FF" title-color="#FF0000">
+
+        <div class="form">
+            <div class="username f-common">
+                <text class="text_user txt">用户名：</text>
+                <input type="text" maxlength="12" id="username" oninput="onchange" placeholder="用户名" class="input"/>
+            </div>
+            <div class="password f-common">
+                <text class="text_pass txt">密码：</text>
+                <input type="password" maxlength="20" id="password" oninput="onchange1" placeholder="密码" class="input"/>
+            </div>
+        </div>
+
+        <div class="action">
+            <div class="signin ac-common" onclick="showsp">
+                <text class="text">注册</text>
+            </div>
+            <div class="login ac-common" onclick="setsp">
+                <text class="text">登录</text>
+            </div>
+        </div>
+        </wxc-navpage>
+    </div>
+</template>
+<script>
+    require('weex-components');
+    var modal = require('@weex-module/modal');
+    var navigator = require('@weex-module/navigator');
+    var storage = require('@weex-module/storage');
+    module.exports = {
+            data:{
+                username:'',
+                password:'',
+                reg_username:'',
+                reg_password:'',
+                paths:'',
+                title:'登录'
+            },
+            ready: function() {
+                var self = this;
+                storage.getItem("username",function(e) {
+                  self.reg_username = e.data;
+                 });
+                 storage.getItem("password",function(e) {
+                    self.reg_password = e.data;
+                  })
+            },
+            methods:{
+                getParameterByName: function (name, url) {
+                                name = name.replace(/[\[\]]/g, "\\$&");
+                                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                                        results = regex.exec(url);
+                                if (!results) return null;
+                                if (!results[2]) return '';
+                                return decodeURIComponent(results[2].replace(/\+/g, " "));
+                },
+                onchange:function(event){
+                   this.username = event.value;
+                },
+                onchange1:function(event){
+                    this.password = event.value;
+                },
+                setsp:function(){
+                    var self = this;
+                    var u = self.username;
+                    var p = self.password;
+                    if(u == ""){
+                        modal.toast({"message":"请输入用户名"});
+                        return false;
+                    }
+                    if(p == ""){
+                        modal.toast({"message":"请输入密码"});
+                        return false;
+                     }
+
+                    if(u!= self.reg_username){
+                        modal.toast({"message":"账户未注册"});
+                        return false;
+                    }
+
+                    if(p!= self.reg_password){
+                         modal.toast({"message":"账户密码错误"});
+                         return false;
+                     }
+
+                     modal.toast({"message":"登录成功"});
+                     navigator.push({"url":this.paths+'index.js'},function(e) {
+                         modal.toast({"message":"跳转成功"});
+                     });
+
+                },
+                showsp:function(){
+                   //this.$openURL(this.paths+'reg.js');
+                    navigator.push({"url":this.paths+'reg.js'},function(e) {
+
+                     })
+                }
+            },
+            created:function () {
+                       var self = this;
+                       var bundleUrl = this.$getConfig().bundleUrl;
+                        //通过当前URL获取上一个页面传递的参数
+                        var names = self.getParameterByName("names",bundleUrl);
+                       console.log("names"+names)
+                       bundleUrl= bundleUrl.substring(0,bundleUrl.lastIndexOf("/")+1);
+                       this.paths=bundleUrl;
+
+              }
+    }
+</script>
+<style>
+    .txt{
+        margin-bottom:10;
+    }
+    .form{
+        margin:30;
+        height:360;
+        flex-direction:cloumn;
+    }
+    .f-common{
+        margin-bottom:20;
+    }
+    .input{
+        height:100;
+        border-width:5;
+        border-radius:5;
+        border-color:#73D0F4;
+
+    }
+    .action{
+        flex-direction:row;
+    }
+    .text{
+        color:#ffffff;
+    }
+    .ac-common{
+        height:100;
+        flex:1;
+        justify-content:center;
+        align-items:center;
+        background-color:#73D0F4;
+        border-radius:10;
+        padding-top:10;
+        padding-bottom:10;
+        margin-left:30;
+        margin-right:30;
+    }
+    .nav_bar{
+        flex-direction:row;
+        height:100;
+        background-color:#73D0F4;
+    }
+    .nav_text{
+        flex:1
+        font-size:40;
+        font-weight:bold;
+        justify-content:center;
+        align-items:center;
+    }
+</style>
