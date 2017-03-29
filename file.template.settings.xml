@@ -1,9 +1,0 @@
-<application>
-  <component name="ExportableFileTemplateSettings">
-    <default_templates>
-      <template name="Vue File.vue" reformat="true" live-template-enabled="true" />
-      <template name="Weex Application.we" reformat="true" live-template-enabled="false" enabled="false" />
-      <template name="weex_file.we" reformat="true" live-template-enabled="false" enabled="false" />
-    </default_templates>
-  </component>
-</application>
