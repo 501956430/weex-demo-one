@@ -1,0 +1,82 @@
+<template>
+    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000">
+        <div class="wrapper">
+            <div class="avatar-backimg">
+                <image src="http://ww1.sinaimg.cn/large/0060lm7Tgw1fb48l87oupj304g04gq2t.jpg" class="avatar-gussi"></image>
+                <image src="http://p1.bpimg.com/1949/8fb079ae1263fa83.jpg" class="avatar-img"></image>
+            </div>
+            <div class="user-action" onclick="to_edit" ac="jump">
+                <text class="text-mag">写笑话</text>
+            </div>
+            <div class="user-action" onclick="click_test" info="about page">
+                <text class="text-mag">关于</text>
+            </div>
+
+            <div class="user-action" style="margin-bottom:10" onclick="quit" info="about page">
+                <text class="text-quit text-mag">退出</text>
+            </div>
+        </div>
+    </wxc-navpage>
+</template>
+<style>
+
+    .avatar-img{
+        width:200;
+        height:200;
+        border-radius:20;
+        border-color:#D8D8D8;
+        border-width:5;
+        position:fixed;
+        top:275;
+        left:275;
+    }
+
+    .avatar-gussi{
+        width:750;
+        height:450;
+    }
+
+    .text-quit{
+        color:red;
+    }
+
+    .wrapper{
+        flex-direction:column;
+        background-color:#EDEDED;
+    }
+
+    .avatar-backimg{
+        width:750;
+        height:450;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .user-info{
+        width:750;
+        flex-direction:row;
+    }
+
+    .text-mag{
+        margin-left:40;
+    }
+    .user-action{
+        margin-top:10;
+        width:750;
+        height:100;
+        justify-content:center;
+        align-items:left;
+        background-color:#FFFFFF;
+    }
+
+</style>
+
+<script>
+    require('weex-components');
+    module.exports = {
+        data: {
+            header: '我的',
+            text: 'Hello word',
+        }
+    }
+</script>
