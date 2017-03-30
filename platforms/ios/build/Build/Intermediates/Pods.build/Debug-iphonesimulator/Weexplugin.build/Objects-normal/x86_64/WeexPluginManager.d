@@ -1,0 +1,43 @@
+dependencies: \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Weexplugin/Weexplugin/Source/WeexPlugin/WeexPluginManager.m \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Target\ Support\ Files/Weexplugin/Weexplugin-prefix.pch \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Weexplugin/Weexplugin/Source/WeexPlugin/WeexPluginManager.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Weexplugin/Weexplugin/Source/WeexPlugin/WeexPluginLoader.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WeexSDK.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXUtility.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXDefine.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXType.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXLog.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXURLRewriteProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXResourceRequest.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXScrollerProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXScrollerComponent.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXComponent.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXLayoutDefine.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/Layout.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXSDKManager.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXSDKInstance.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXBridgeManager.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXSDKError.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXSDKEngine.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXRootViewController.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXResourceResponse.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXResourceRequestHandler.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXNetworkProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXModuleProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXNavigationProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXMonitor.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXModalUIModule.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXListComponent.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXJSExceptionProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXJSExceptionInfo.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXImgLoaderProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXEventModuleProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXDebugTool.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXConvert.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXComponentManager.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXBridgeProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXBaseViewController.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXAppMonitorProtocol.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/WXAppConfiguration.h \
+  /Users/tangbo/WebstormProjects/weex-demo-one/platforms/ios/Pods/Headers/Public/WeexSDK/WeexSDK/NSObject+WXSwizzle.h
