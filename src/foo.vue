@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
-    <!--<image src="https://alibaba.github.io/weex/img/weex_logo_blue@3x.png" class="logo"></image>-->
-    <text class="title">Hello World</text>
+  <div class="wrapper" @click="update">
+    <image :src="logoUrl" class="logo"></image>
+    <text class="title">Hello {{target}}</text>
   </div>
 </template>
 
@@ -10,3 +10,18 @@
   .title { font-size: 48px; }
   .logo { width: 360px; height: 82px; }
 </style>
+
+<script>
+  module.exports = {
+    data: {
+      logoUrl: 'https://alibaba.github.io/weex/img/weex_logo_blue@3x.png',
+      target: 'World'
+    },
+    methods: {
+      update: function (e) {
+        this.target = 'Weex';
+        console.log('target:', this.target)
+      }
+    }
+  }
+</script>
