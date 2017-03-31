@@ -29,24 +29,11 @@ require('weex-components');
     module.exports = {
         data: {
             color: '#ff0000',
-            text: '',
+            text: '发布',
         },
         created: function() {
             var bundleUrl = this.$getConfig().bundleUrl;
             nativeLog('bundleUrl = ' + bundleUrl);
-
-            if (bundleUrl.indexOf("tab1") > 0){
-                this.color = '#ff0000';
-                this.text = 'This is Tab 1 Test.';
-            }
-            else if (bundleUrl.indexOf("tab2") > 0){
-                this.color = '#00ff00';
-                this.text = 'This is Tab 2 Test.';
-            } 
-            else if (bundleUrl.indexOf("tab3") > 0){
-                this.color = '#0000ff';
-                this.text = 'This is Tab 3 Test.';
-            } 
         }
     }
 </script>
