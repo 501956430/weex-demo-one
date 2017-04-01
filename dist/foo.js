@@ -41,19 +41,23 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(1)
+	__vue_styles__.push(__webpack_require__(86)
 	)
 
+	/* script */
+	__vue_exports__ = __webpack_require__(87)
+
 	/* template */
-	var __vue_template__ = __webpack_require__(2)
+	var __vue_template__ = __webpack_require__(88)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -65,15 +69,19 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "C:\\Users\\tangbo.JHH\\WebstormProjects\\demo1\\src\\foo.vue"
+	__vue_options__.__file = "C:\\Users\\tangbo.JHH\\WebstormProjects\\weex-demo-one\\src\\foo.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-5d4b6cef"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
-	for (var name in module) {
-	__vue_options__.style[name] = module[name]
-	}
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
 	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
 
 	module.exports = __vue_exports__
 	module.exports.el = 'true'
@@ -81,7 +89,8 @@
 
 
 /***/ },
-/* 1 */
+
+/***/ 86:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -99,19 +108,61 @@
 	}
 
 /***/ },
-/* 2 */
+
+/***/ 87:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	module.exports = {
+	  data: {
+	    logoUrl: 'https://alibaba.github.io/weex/img/weex_logo_blue@3x.png',
+	    target: 'World'
+	  },
+	  methods: {
+	    update: function update(e) {
+	      this.target = 'Weex';
+	      console.log('target:', this.target);
+	    }
+	  }
+	};
+
+/***/ },
+
+/***/ 88:
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["wrapper"]
-	  }, [_c('text', {
+	    staticClass: ["wrapper"],
+	    on: {
+	      "click": _vm.update
+	    }
+	  }, [_c('image', {
+	    staticClass: ["logo"],
+	    attrs: {
+	      "src": _vm.logoUrl
+	    }
+	  }), _c('text', {
 	    staticClass: ["title"]
-	  }, [_vm._v("Hello World")])])
-	}]}
+	  }, [_vm._v("Hello " + _vm._s(_vm.target))])])
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }
-/******/ ]);
+
+/******/ });
