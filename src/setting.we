@@ -1,20 +1,20 @@
 <template>
-    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000">
+    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000" >
         <div class="wrapper">
             <div class="avatar-backimg">
                 <image src="http://ww1.sinaimg.cn/large/0060lm7Tgw1fb48l87oupj304g04gq2t.jpg" class="avatar-gussi"></image>
-                <image src="http://p1.bpimg.com/1949/8fb079ae1263fa83.jpg" class="avatar-img"></image>
+                <image src="{{imgs}}" class="avatar-img"></image>
             </div>
-            <div class="user-action" onclick="to_edit" ac="jump">
+            <div class="user-action" onclick="onload('')">
                 <text class="text-mag">写笑话</text>
                 <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
             </div>
-            <div class="user-action" onclick="click_test" info="about page">
+            <div class="user-action" onclick="onload('about.js')">
                 <text class="text-mag">关于</text>
                 <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
             </div>
 
-            <div class="user-action" style="margin-bottom:10;position: relative;" onclick="quit" info="about page">
+            <div class="user-action" style="margin-bottom:10;position: relative;" onclick="quit">
                 <text class="text-quit text-mag" style="">退出</text>
                 <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
             </div>
@@ -75,11 +75,27 @@
 </style>
 
 <script>
+    var modal = require('@weex-module/modal');
+    var navigator = require('@weex-module/navigator');
     require('weex-components');
     module.exports = {
         data: {
             header: '我的',
             text: 'Hello word',
+            imgs:'http://p1.bpimg.com/1949/8fb079ae1263fa83.jpg',
+            paths:'',
+        },
+        created: function() {
+            var bundleUrl = this.$getConfig().bundleUrl;
+            bundleUrl= bundleUrl.substring(0,bundleUrl.lastIndexOf("/")+1);
+            this.paths=bundleUrl;
+            //this.imgs=bundleUrl+"right.png";
+        },methods:{
+            onload:function (target,e) {
+                var self = this;
+                navigator.push({"url":self.paths+target},function (e) {
+                })
+            }
         }
     }
 </script>
