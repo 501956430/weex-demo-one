@@ -6,7 +6,7 @@
                 <image src="{{imgs}}" class="avatar-img"></image>
             </div>
             <div class="user-action" onclick="onload('')">
-                <text class="text-mag">写笑话</text>
+                <text class="text-mag">个人资料</text>
                 <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
             </div>
             <div class="user-action" onclick="onload('about.js')">
