@@ -1,20 +1,28 @@
 <template>
-    <wxc-navpage title="{{text}}" background-color="#3683FF" title-color="#FF0000">
+<div>
+    <wxc-navpage title="{{text}}" background-color="#3683FF" title-color="#FF0000"></wxc-navpage>
     <div class="wrapper">
-        <text class="text" style="color:{{color}}">{{text}}</text>
+              <text>direction:{{direction}}</text>
+              <text>pageX:{{pageX}}</text>
+              <text>pageY:{{pageY}}</text>
+              <text>screenX:{{screenX}}</text>
+              <text>screenY:{{screenY}}</text>
+              <div style="background-color: #73D0F4;height: 500;width: 350" onswipe="swipes" ontouchmove="handleTouchmove" ontouchstart="handleTouchstart">
+              <text class="text" style="color:{{color}}">{{text}}</text>
+              </div>
     </div>
-    </wxc-navpage>
+</div>
 </template>
 
 <style>
-    .wrapper { 
-        width: 750; 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        right: 0; 
+    .wrapper {
+        width: 750;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
         bottom: 0;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
     }
     .text {
@@ -26,14 +34,41 @@
 
 <script>
 require('weex-components');
+var modal = require('@weex-module/modal');
     module.exports = {
         data: {
             color: '#ff0000',
             text: '发布',
+            direction:'',
+            pageX:'',
+            pageY:'',
+            screenX:'',
+            screenY:'',
+        },
+        methods: {
+            handleTouchstart: function(eventProperties) {
+              //modal.toast({"message":"我被触摸了"})
+            },
+            handleTouchmove: function(eventProperties) {
+                //modal.toast({"message":"我被移动了"})
+            },
+            swipes:function(e) {
+              this.direction=e.direction;
+              this.pageX=e.changedTouches[0].pageX;
+              this.pageY=e.changedTouches[0].pageY;
+              this.screenX=e.changedTouches[0].screenX;
+              this.screenY=e.changedTouches[0].screenY;
+              //modal.toast({"message":"我被挪动了"+JSON.stringify(e),"duration":10})
+            }
         },
         created: function() {
             var bundleUrl = this.$getConfig().bundleUrl;
             nativeLog('bundleUrl = ' + bundleUrl);
+            this.$on('swipe',function(e) {
+            nativeLog('fggggggg');
+               console.log('sssssss');
+            });
+
         }
     }
 </script>
