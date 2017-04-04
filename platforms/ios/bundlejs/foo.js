@@ -41,19 +41,23 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(1)
+	__vue_styles__.push(__webpack_require__(89)
 	)
 
+	/* script */
+	__vue_exports__ = __webpack_require__(90)
+
 	/* template */
-	var __vue_template__ = __webpack_require__(2)
+	var __vue_template__ = __webpack_require__(91)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -85,7 +89,8 @@
 
 
 /***/ },
-/* 1 */
+
+/***/ 89:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -103,19 +108,61 @@
 	}
 
 /***/ },
-/* 2 */
+
+/***/ 90:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	module.exports = {
+	  data: {
+	    logoUrl: 'https://alibaba.github.io/weex/img/weex_logo_blue@3x.png',
+	    target: 'World'
+	  },
+	  methods: {
+	    update: function update(e) {
+	      this.target = 'Weex';
+	      console.log('target:', this.target);
+	    }
+	  }
+	};
+
+/***/ },
+
+/***/ 91:
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["wrapper"]
-	  }, [_c('text', {
+	    staticClass: ["wrapper"],
+	    on: {
+	      "click": _vm.update
+	    }
+	  }, [_c('image', {
+	    staticClass: ["logo"],
+	    attrs: {
+	      "src": _vm.logoUrl
+	    }
+	  }), _c('text', {
 	    staticClass: ["title"]
-	  }, [_vm._v("Hello World")])])
-	}]}
+	  }, [_vm._v("Hello " + _vm._s(_vm.target))])])
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }
-/******/ ]);
+
+/******/ });

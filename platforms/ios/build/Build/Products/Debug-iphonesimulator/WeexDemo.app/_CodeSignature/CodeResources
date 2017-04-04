@@ -478,11 +478,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		nt+UxC9Kk6qUV23Xy3quo9RVJBk=
+		Hy2D967gZYJPw0hx0vWFZPy2aJo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mf/FIoHDosWuPnjrdE2ajG2/Y7E=
+		twylsrGhWLfXRMEkpgPSrgGqJJk=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -524,29 +524,69 @@
 		<data>
 		OScMLutOyQl3zmAhdIKSCBGe0KQ=
 		</data>
+		<key>bundlejs/about.js</key>
+		<data>
+		VfBcr+lRnS/Ldw3Ji0W4bOsREOk=
+		</data>
+		<key>bundlejs/animation.js</key>
+		<data>
+		HaklQ8u3yxF2HHCkpIJAScJSQRg=
+		</data>
 		<key>bundlejs/foo.js</key>
 		<data>
-		AvAv/sblrML3ExuNheXqbdScscU=
+		H6+EFUxaolqzCSrWm7zRe2+9Hqo=
 		</data>
 		<key>bundlejs/index.js</key>
 		<data>
-		UNO7rlK/k07i78Xxm6eRHkgwsoc=
+		P3Uq1UKDWcucSDl3lFUwlziCXv8=
 		</data>
 		<key>bundlejs/login.js</key>
 		<data>
-		LyeQ/wpK7PejTNJYfV5n2oDZCHM=
+		dk++jWrS3f5iBhi1B0Tnpjvcfzk=
 		</data>
 		<key>bundlejs/main.js</key>
 		<data>
-		2RqM80qN4mvAXYHeALNdE6hf/x4=
+		PYNhS+utPoDm28/RS5gghg3m0KQ=
+		</data>
+		<key>bundlejs/nav-bar.js</key>
+		<data>
+		Mc5OmAeMCD1vJa0j6EOvq4NLwoM=
 		</data>
 		<key>bundlejs/reg.js</key>
 		<data>
-		iBZ5t15IaS+8snRRQpsenibw2Sk=
+		d5jlScOS26a3m0EGydI53/JT9lM=
+		</data>
+		<key>bundlejs/scroller-home.js</key>
+		<data>
+		fCZO9990cywqLPlE0eL/bfGiuvM=
+		</data>
+		<key>bundlejs/scroller-row.js</key>
+		<data>
+		Dd1zGGMWMaxFizKltEKQzhwrFoA=
 		</data>
 		<key>bundlejs/scroller.js</key>
 		<data>
-		KwBTfRHbNOewLqtvOdtPmjbPqgI=
+		pKVxx0HDOLQbwB2nFcxJ16NUVKY=
+		</data>
+		<key>bundlejs/send.js</key>
+		<data>
+		1o9eTteES/3dZqDAkc4LBpCEZes=
+		</data>
+		<key>bundlejs/setting.js</key>
+		<data>
+		XZrMdzEaghmjRfdMjmB/Y8oUHOE=
+		</data>
+		<key>bundlejs/slider-demo.js</key>
+		<data>
+		27JvDiSUfRwME34kJWLyMAMnlbM=
+		</data>
+		<key>bundlejs/slider-item.js</key>
+		<data>
+		FanbTNFXCrAyRet6zsgKwXBTw1I=
+		</data>
+		<key>bundlejs/slider-page.js</key>
+		<data>
+		ulCkh0qfdVaRLh2aPErBp9Y5UmE=
 		</data>
 		<key>bundlejs/tabbar-item.js</key>
 		<data>
@@ -554,7 +594,15 @@
 		</data>
 		<key>bundlejs/tabbar.js</key>
 		<data>
-		UNO7rlK/k07i78Xxm6eRHkgwsoc=
+		P3Uq1UKDWcucSDl3lFUwlziCXv8=
+		</data>
+		<key>bundlejs/user.js</key>
+		<data>
+		/qvd5PyS37Mc5wxg5dvQFLSUgFs=
+		</data>
+		<key>bundlejs/wxc-navbar.js</key>
+		<data>
+		TY8DLKgqXmxDBSYA1NJjuNrzDNY=
 		</data>
 		<key>config.xml</key>
 		<data>
@@ -1903,11 +1951,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nt+UxC9Kk6qUV23Xy3quo9RVJBk=
+			Hy2D967gZYJPw0hx0vWFZPy2aJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Sn7kcw1T7xjZ2aNcpHoDDBp5TJkexnpUbMEvxAkyHaQ=
+			ZCSMnu1WYOR9V33HYRrkfV+tAAg/anOdrgDSXtAX9Ok=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2009,70 +2057,180 @@
 			UC0lDckT5d6cQoZixQ408RJoGYGRP/pNoqDWw6ZDRyc=
 			</data>
 		</dict>
+		<key>bundlejs/about.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VfBcr+lRnS/Ldw3Ji0W4bOsREOk=
+			</data>
+			<key>hash2</key>
+			<data>
+			gKtc9D8TmpLYftCelHcfM7nmNAO8dQ/OidSfMEpyeOs=
+			</data>
+		</dict>
+		<key>bundlejs/animation.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HaklQ8u3yxF2HHCkpIJAScJSQRg=
+			</data>
+			<key>hash2</key>
+			<data>
+			IyU9z0ovxzYSHTm5LrZFRp1C52SsQNnMLUXA5X/oWlY=
+			</data>
+		</dict>
 		<key>bundlejs/foo.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AvAv/sblrML3ExuNheXqbdScscU=
+			H6+EFUxaolqzCSrWm7zRe2+9Hqo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vnqQyQmc58EYdJ7o1/g5HlvcTjUkWXfgPMFxE6Pgo/I=
+			CZZtNafUf15g5I3m1aLHOzCmAydkNttZXPoArQbXl4Q=
 			</data>
 		</dict>
 		<key>bundlejs/index.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UNO7rlK/k07i78Xxm6eRHkgwsoc=
+			P3Uq1UKDWcucSDl3lFUwlziCXv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			vPjhhnOpFigI6rQI3WoeL3roDNUX9pilsbNA4ZGCn7Q=
+			upjTgPVIpMOO8vjNNIwAbYruSf6gmqIflO8KeJOA+h0=
 			</data>
 		</dict>
 		<key>bundlejs/login.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LyeQ/wpK7PejTNJYfV5n2oDZCHM=
+			dk++jWrS3f5iBhi1B0Tnpjvcfzk=
 			</data>
 			<key>hash2</key>
 			<data>
-			WPqd68J+Oq1gT+9Z5m1qI8A/MxjjUgcpzKKSOdB0nVI=
+			zrNwVvBS/8uIpVUKW3LH9VoliBjEQrz0BfZkAbUhrgM=
 			</data>
 		</dict>
 		<key>bundlejs/main.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2RqM80qN4mvAXYHeALNdE6hf/x4=
+			PYNhS+utPoDm28/RS5gghg3m0KQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			m4RLChlG3DcJjOHzpuzS3FHI8dG/Ysl6bQp4PZSpRLM=
+			k3ojbNdAFAETFYlOpQs+KdwKl/AWENg9HdzZDlXx8D4=
+			</data>
+		</dict>
+		<key>bundlejs/nav-bar.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Mc5OmAeMCD1vJa0j6EOvq4NLwoM=
+			</data>
+			<key>hash2</key>
+			<data>
+			dynb1zk0pjpxjQGEB0FOi0WA9jdXZ1hD2n18Z/hVNMk=
 			</data>
 		</dict>
 		<key>bundlejs/reg.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iBZ5t15IaS+8snRRQpsenibw2Sk=
+			d5jlScOS26a3m0EGydI53/JT9lM=
 			</data>
 			<key>hash2</key>
 			<data>
-			m0rXeFvSddlaGDnXY6EZhYTbjToBoWqSQ3wFtRCPka8=
+			rvR41K1jVPu7UtvBPoqGlEShH5ow9zKZXRI9arNz8xQ=
+			</data>
+		</dict>
+		<key>bundlejs/scroller-home.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fCZO9990cywqLPlE0eL/bfGiuvM=
+			</data>
+			<key>hash2</key>
+			<data>
+			V2IEi2Cadh1usjy5UvU3D4YxZuq1FC6e60laY2bbwEk=
+			</data>
+		</dict>
+		<key>bundlejs/scroller-row.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Dd1zGGMWMaxFizKltEKQzhwrFoA=
+			</data>
+			<key>hash2</key>
+			<data>
+			b6dYcTWg62q9eu6DdwR52QE7x3WbSU1zE5K+4TTJPYo=
 			</data>
 		</dict>
 		<key>bundlejs/scroller.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KwBTfRHbNOewLqtvOdtPmjbPqgI=
+			pKVxx0HDOLQbwB2nFcxJ16NUVKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fbEAyIHWntGg9W7gvRvxaEjJ/Brg/wFzfG6sY4uqtZ0=
+			iVS9vupYBXYlaS1i8yy6NtffiWfodyT0SOzcyQEtuM8=
+			</data>
+		</dict>
+		<key>bundlejs/send.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1o9eTteES/3dZqDAkc4LBpCEZes=
+			</data>
+			<key>hash2</key>
+			<data>
+			1anlTvvfMaXtIB99sDqxZj3cuCfoy9iD1sWc4P5q7QQ=
+			</data>
+		</dict>
+		<key>bundlejs/setting.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XZrMdzEaghmjRfdMjmB/Y8oUHOE=
+			</data>
+			<key>hash2</key>
+			<data>
+			qAIHstoLY2Omi7Wc2Ra0qHgB8YqED65WMfWCAtknJFg=
+			</data>
+		</dict>
+		<key>bundlejs/slider-demo.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			27JvDiSUfRwME34kJWLyMAMnlbM=
+			</data>
+			<key>hash2</key>
+			<data>
+			Nnr4wAjoKonMCcMw4Xag5F1v+POB2jdgIuWJzAJT4N4=
+			</data>
+		</dict>
+		<key>bundlejs/slider-item.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FanbTNFXCrAyRet6zsgKwXBTw1I=
+			</data>
+			<key>hash2</key>
+			<data>
+			Tbl1BDVNrAfbTux3plRCJNKD6ZtR6QokP4AB828BQdM=
+			</data>
+		</dict>
+		<key>bundlejs/slider-page.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ulCkh0qfdVaRLh2aPErBp9Y5UmE=
+			</data>
+			<key>hash2</key>
+			<data>
+			OLFuE0aHpidVIauEKb5l/vBLVdpJCFb0mHVVl+dTYcE=
 			</data>
 		</dict>
 		<key>bundlejs/tabbar-item.js</key>
@@ -2090,11 +2248,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UNO7rlK/k07i78Xxm6eRHkgwsoc=
+			P3Uq1UKDWcucSDl3lFUwlziCXv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			vPjhhnOpFigI6rQI3WoeL3roDNUX9pilsbNA4ZGCn7Q=
+			upjTgPVIpMOO8vjNNIwAbYruSf6gmqIflO8KeJOA+h0=
+			</data>
+		</dict>
+		<key>bundlejs/user.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/qvd5PyS37Mc5wxg5dvQFLSUgFs=
+			</data>
+			<key>hash2</key>
+			<data>
+			qP6eRtvAtccCwmhx4TkYUhYJD1e7ihWKkh3GsUn8Jvw=
+			</data>
+		</dict>
+		<key>bundlejs/wxc-navbar.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TY8DLKgqXmxDBSYA1NJjuNrzDNY=
+			</data>
+			<key>hash2</key>
+			<data>
+			rDrwiUIMjFoL2lMkMWRrlvHUy7HuxcAomD9Svs3SEhk=
 			</data>
 		</dict>
 		<key>config.xml</key>
