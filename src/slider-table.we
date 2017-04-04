@@ -1,0 +1,167 @@
+<template>
+  <div>
+      <wxc-navpage title="首页" background-color="#3683FF" onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF"></wxc-navpage>
+
+    <!--<div class="nav_bar">-->
+                      <!--<text class="nav_title" style="color: {{leftcolor}};" navi-item-position="left">left</text>-->
+                      <!--<text class="nav_title" style="color: {{centercolor}};" navi-item-position="center">center</text>-->
+                      <!--<text class="nav_title" style="color: {{rightcolor}};" navi-item-position="right">right</text>-->
+               <!--</div>-->
+    <slider class="slider" onchange="abcd">
+      <div repeat="{{img in imageList}}">
+          <scroller class="scroller">
+          <div class="row" repeat="{{item in rows}}" >
+                          <text class="text">{{item}}</text>
+                        </div>
+          <!--<image class="image" resize="cover" src="{{img.src}}"></image>-->
+          </scroller>
+      </div>
+    </slider>
+  </div>
+</template>
+<style scoped>
+ .row {
+    height: 150px;
+    width: 750;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #DDDDDD;
+  }
+ .nav_bar {
+        background-color: rgba(0, 0, 0, 0.3);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 99px;
+    }
+
+    .nav_title {
+        color: #eee;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+.scroller {
+    width: 750px;
+  }
+  .image {
+    width: 750px;
+    height: 1600px;
+  }
+  .slider {
+    /*margin-top: 88px;*/
+    height: 1120;
+  }
+  .frame {
+    /*width: 700px;*/
+    /*height: 700px;*/
+    /*position: relative;*/
+  }
+</style>
+
+<script>
+  require('weex-components');
+  var modal = require('@weex-module/modal');
+  var img0 = '//gw.alicdn.com/tps/i2/TB1DpsmMpXXXXabaXXX20ySQVXX-512-512.png_400x400.jpg';
+  var img1 = '//gw.alicdn.com/tps/i1/TB1M3sQMpXXXXakXXXXApNeJVXX-360-360.png';
+  module.exports = {
+  created: function() {
+            for (var i=0; i < 30; i++) {
+              this.rows.push('rows ' + i);
+            }
+          },
+  methods: {
+  
+      abcd:function(e) {
+         this.text=e.index;
+         this.leftcolor='#eee';
+         this.centercolor='#eee';
+         this.rightcolor='#eee';
+         if(e.index ==1){
+           this.centercolor='#ggggg';
+         }
+         else if(e.index ==2){
+             this.rightcolor='#ggggg';
+         }else if(e.index ==0){
+             this.leftcolor='#ggggg';
+         }
+      }
+    },
+  
+    data: {
+      rows:[],
+      rightcolor:'#eee',
+      centercolor:'#eee',
+      text:'no',
+      leftcolor:'#ggggg',
+      eventCnt: 0,
+      imageList: [
+                { src: 'https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg'},
+                { src: 'https://gd1.alicdn.com/bao/uploaded/i1/TB1PXJCJFXXXXciXFXXXXXXXXXX_!!0-item_pic.jpg'},
+                { src: 'https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg'}
+              ],
+      sliders: [
+        {
+          interval: 3000,
+          autoPlay: true,
+          sliderPages: [
+            {
+              items: [
+                {
+                  image: img0,
+                  link: '//h5.m.taobao.com/1'
+                },
+                {
+                  image: img0,
+                  link: '//h5.m.taobao.com/1'
+                }
+              ]
+            },
+            {
+              items: [
+                {
+                  image: img1,
+                  link: '//h5.m.taobao.com/1'
+                },
+                {
+                  image: img1,
+                  link: '//h5.m.taobao.com/1'
+                }
+              ]
+            },
+            {
+              items: [
+                {
+                  image: img0,
+                  link: '//h5.m.taobao.com/1'
+                },
+                {
+                  image: img1,
+                  link: '//h5.m.taobao.com/1'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  };
+</script>
+
+<style>
+  .body {
+    background-color: #ffffff;
+  }
+
+  .slider {
+   border: 5px solid #889967;
+    flex-direction: row;
+    /*margin-left: 0;*/
+    /*margin-right: 18;*/
+    /*width: 690;*/
+    /*height: 360;*/
+  }
+</style>

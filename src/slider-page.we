@@ -1,0 +1,40 @@
+<style>
+  .slider-page {
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    width: 750px;
+    height: 1200px;
+  }
+</style>
+
+<template>
+  <div class="slider-page">
+    <slider-item repeat="{{sliderItems}}"></slider-item>
+  </div>
+</template>
+
+<script>
+var img0 = '//gw.alicdn.com/tps/i2/TB1DpsmMpXXXXabaXXX20ySQVXX-512-512.png_400x400.jpg';
+  module.exports = {
+    data: {
+      items: [
+                        {
+                        image: img0,
+                        link: '//h5.m.taobao.com/1'
+                      }
+      ],
+      sliderItems: []
+    },
+    methods: {
+      ready: function() {
+        this.sliderItems = this.getSliderItems()
+      },
+      getSliderItems: function() {
+        return this.items.map(function(item, index) {
+          return item;
+        }.bind(this));
+      }
+    }
+  };
+</script>
+
