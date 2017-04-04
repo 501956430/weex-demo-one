@@ -1,25 +1,26 @@
 <template>
-    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000" >
-        <div class="wrapper">
-            <div class="avatar-backimg">
-                <image src="http://ww1.sinaimg.cn/large/0060lm7Tgw1fb48l87oupj304g04gq2t.jpg" class="avatar-gussi"></image>
-                <image src="{{imgs}}" class="avatar-img"></image>
-            </div>
-            <div class="user-action" onclick="onload('user.js')">
-                <text class="text-mag">个人资料</text>
-                <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
-            </div>
-            <div class="user-action" onclick="onload('about.js')">
-                <text class="text-mag">关于</text>
-                <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
-            </div>
+    <div>
+    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000" ></wxc-navpage>
+    <div class="wrapper">
+                <div class="avatar-backimg">
+                    <image src="http://ww1.sinaimg.cn/large/0060lm7Tgw1fb48l87oupj304g04gq2t.jpg" class="avatar-gussi"></image>
+                    <image src="{{imgs}}" class="avatar-img"></image>
+                </div>
+                <div class="user-action" onclick="onload('user.js')">
+                    <text class="text-mag">个人资料</text>
+                    <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
+                </div>
+                <div class="user-action" onclick="onload('about.js')">
+                    <text class="text-mag">关于</text>
+                    <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
+                </div>
 
-            <div class="user-action" style="margin-bottom:10;position: relative;" onclick="quit">
-                <text class="text-quit text-mag" style="">退出</text>
-                <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
+                <div class="user-action" style="margin-bottom:10;position: relative;" onclick="quit">
+                    <text class="text-quit text-mag" style="">退出</text>
+                    <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
+                </div>
             </div>
-        </div>
-    </wxc-navpage>
+    </div>
 </template>
 <style>
 
