@@ -1,7 +1,7 @@
 <template>
 <div>
-    <wxc-navpage title="首页" background-color="#3683FF" onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF"></wxc-navpage>
-    <list class="list">
+    <wxc-navpage title="首页" background-color="#3683FF"  onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF"></wxc-navpage>
+    <list style="margin-top: {{height}};">
           <refresh  class = "refresh-view" display="{{refresh_display}}" onrefresh="onrefresh">
             <text if="{{(refresh_display==='hide')}}"> ↓ pull to refresh </text>
             <loading-indicator class="indicator"></loading-indicator>
@@ -19,9 +19,6 @@
 </div>
 </template>
 <style>
-  .list {
-    height:1120
-  }
   .indicator {
     height: 40;
     width: 40;
@@ -77,8 +74,16 @@
 
 <script>
 require('weex-components');
+var modal = require('@weex-module/modal');
   module.exports = {
     methods: {
+        ready: function(){
+            var config = this.$getConfig();
+//            modal.toast({"message":config.env.platform,'duration':5});
+            if(config.env.platform=='android'){
+                this.height='88';
+            }
+        },
       onappear: function (e) {
         var appearId = this.rows[e.target.attr.index].id;
         nativeLog('+++++', appearId);
@@ -132,6 +137,7 @@ require('weex-components');
       },
     },
     data: {
+        height:'0',
       refresh_display: 'hide',
       loading_display: 'hide',
       appearMin:1,
