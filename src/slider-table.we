@@ -74,7 +74,13 @@
             }
           },
   methods: {
-  
+      ready: function(){
+          var config = this.$getConfig();
+          var screenHeight = config.env.deviceHeight;
+          //var height = 88 * screenHeight / 750;
+		  var height = screenHeight - 88 -88;
+          modal.toast({'message':'height:'+screenHeight+'----'+height,'duration':5});
+      },
       abcd:function(e) {
          this.text=e.index;
          this.leftcolor='#eee';
@@ -90,7 +96,7 @@
          }
       }
     },
-  
+
     data: {
       rows:[],
       rightcolor:'#eee',
