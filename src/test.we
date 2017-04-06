@@ -1,0 +1,281 @@
+<template>
+    <div style="position: relative">
+        <scroller style="bottom: 96px">
+            <refresh class="refresh-view" display="{{refresh_display}}" onrefresh="onrefresh">
+                <text class="refresh-arrow" if="{{(refresh_display==='hide')}}">刷新</text>
+            </refresh>
+            <div style="background-color: #F5F5F5;position: relative">
+                <!--轮播图-->
+                <slider class="slider" auto-play="false" interval="3000">
+                    <div class="div1" repeat="event in events">
+                        <image class="imagestyle" src="{{event.image}}"></image>
+                    </div>
+                    <indicator class="indicator"></indicator>
+                </slider>
+                <!--三个快速跳转按钮-->
+                <div class="div2">
+                    <div class="div3">
+                        <image class="image"
+                               src="http://mbpcos.image.alimmdn.com/events/a2d972fe9bc2b15cabe7e0e1f8bdc0e8"></image>
+                        <text class="text1">COS</text>
+                    </div>
+                    <div class="div3">
+                        <image class="image"
+                               src="http://mbpcos.image.alimmdn.com/events/a2d972fe9bc2b15cabe7e0e1f8bdc0e8"></image>
+                        <text class="text1">摄影</text>
+                    </div>
+                    <div class="div3">
+                        <image class="image"
+                               src="http://mbpcos.image.alimmdn.com/events/a2d972fe9bc2b15cabe7e0e1f8bdc0e8"></image>
+                        <text class="text1">漫圈</text>
+                    </div>
+                </div>
+                <text style="width: 750px;height: 1px;background-color: #e0e0e0"></text>
+                <!--活动banner图-->
+                <div style="width: 750px;height: 278px">
+                    <image style="height: 230px;width: 750px;top: 24px;bottom: 24px" src="{{image_banner}}"></image>
+                </div>
+                <!--摄影达人和更多-->
+                <div style="background-color: white;height: 540px">
+                    <div style="height: 60px;width: 750px;flex-direction: row">
+                        <text style=" top: 24px;left: 24px;font-size: 30px ;flex: 1;">摄影达人</text>
+                        <text style="top: 24px;right: 24px;font-size: 30px;flex: 1;text-align: right">更多></text>
+                    </div>
+                    <!--推荐摄影师。展示6个-->
+                    <div repeat="item in shooters" class="div4">
+                        <div repeat="shooter in item" class="div5">
+                            <div class="div6">
+                                <image class="image2"
+                                       src="{{shooter.avatarUrl}}"></image>
+                                <text class="text2">{{shooter.displayName}}</text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </scroller>
+        <div class="div_title">
+            <div style="border-width: 2px;border-color: white;width: 618px;height: 60px;align-self: center;border-radius: 10px">
+                <div class="div_input">
+                    <image style="height: 35px;width:35px;left:12px;align-self: center"
+                           src="http://mbpcos.image.alimmdn.com/events/a2d972fe9bc2b15cabe7e0e1f8bdc0e8"></image>
+                    <text style="width:500px;height: 24px;align-self: center ;font-size: 24px;color: white;left: 20px">
+                        搜索地点名，ACG名，标签
+                    </text>
+
+                </div>
+            </div>
+            <image style="height: 58px;width:58px;left:24px;align-self: center"
+                   src="http://mbpcos.image.alimmdn.com/events/a2d972fe9bc2b15cabe7e0e1f8bdc0e8"></image>
+        </div>
+    </div>
+</template>
+<style>
+    .imagestyle {
+        height: 428px;
+        width: 750px;
+    }
+
+    .slider {
+        flex-direction: row;
+        height: 428px;
+        width: 750px;
+    }
+
+    .div_title {
+        flex-direction: row;
+        position: absolute;
+        top: 0px;
+        left: 24px;
+        height: 96px;
+        width: 726px;
+        background-color: transparent;
+    }
+
+    .div_input {
+        flex-direction: row;
+        background-color: black;
+        opacity: 0.2;
+        height: 56px;
+        width: 614px;
+        border-radius: 10px
+    }
+
+    .div1 {
+        flex-direction: row;
+        height: 428px;
+        width: 750px;
+    }
+
+    .indicator {
+        height: 750px;
+        width: 750px;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        item-color: #c0c0c0;
+        item-selectedColor: #ffffff;
+        item-size: 20;
+    }
+
+    .div2 {
+        flex-direction: row;
+        background-color: white;
+        height: 222px;
+        width: 750px;
+    }
+
+    .div3 {
+        justify-content: center;
+        align-items: center;
+        height: 222px;
+        width: 750px;
+        flex: 1;
+    }
+
+    .div4 {
+        height: 230px;
+        width: 750px;
+        background-color: white;
+        flex-direction: row;
+
+    }
+
+    .div5 {
+        height: 220px;
+        flex: 1;
+    }
+
+    .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+
+    .text1 {
+        font-size: 30px;
+        top: 18px;
+    }
+
+    .text2 {
+        font-size: 30px;
+        top: 30px;
+    }
+
+    .image2 {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+    }
+
+    .div6 {
+        height: 220px;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .refresh-view {
+        height: 80px;
+        width: 750px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .refresh-arrow {
+        font-size: 30px;
+        color: #45b5f0;
+    }
+</style>
+<script>
+    var stream = require('@weex-module/stream')
+    var event_url = 'http://mbpcos.com/events'
+    var banner_url = 'http://mbpcos.com/events/rec'
+    var shooter_url = 'http://mbpcos.com/shoot/photographer?page=1&perPage=6'
+
+    module.exports = {
+        data: {
+            refresh_display: 'hide',
+            events: [],
+            image_banner: "",
+            shooters: []
+        },
+        created: function () {
+
+            this.getEvents()
+            this.getBanner()
+            this.getShooters()
+        },
+        methods: {
+            onrefresh: function () {
+                var self = this;
+                self.refresh_display = 'show';
+                self.events = []
+                self.image_banner = ""
+                self.shooters = []
+                self.getEvents()
+                self.getBanner()
+                self.getShooters()
+            },
+            getEvents: function () {
+                var self = this
+                stream.fetch({
+                    methods: 'GET',
+                    url: event_url
+                }, function (res) {
+                    if (res.ok) {
+                        var list_event = JSON.parse(res.data)
+                        for (var i = 0; i < list_event.length; i++) {
+                            self.events.push(list_event[i])
+                        }
+                        self.refresh_display = 'hide'
+                    }
+                },function(response){
+                    //TODO
+                })
+            },
+            getBanner: function () {
+                var self = this
+                stream.fetch({
+                    methods: 'GET',
+                    url: banner_url
+                }, function (res) {
+                    if (res.ok) {
+                        var banner = JSON.parse(res.data)
+                        self.image_banner = banner.image;
+                        self.refresh_display = 'hide'
+                    }
+                },function(response){
+                    //TODO
+                })
+            },
+            getShooters: function () {
+                var self = this
+                stream.fetch({
+                    methods: 'GET',
+                    url: shooter_url
+                }, function (res) {
+                    if (res.ok) {
+                        var list_shooter = JSON.parse(res.data)
+                        var list1 = new Array();
+                        var list2 = new Array();
+                        for (var i = 0; i < list_shooter.data.length; i++) {
+                            if (i <= 2) {
+                                list1.push(list_shooter.data[i])
+                            } else {
+                                list2.push(list_shooter.data[i])
+                            }
+                        }
+                        self.shooters.push(list1)
+                        self.shooters.push(list2)
+                        console.log(self.shooters)
+                        self.refresh_display = 'hide'
+                    }
+                },function(response){
+                    //TODO
+                })
+            }
+        }
+    }
+</script>

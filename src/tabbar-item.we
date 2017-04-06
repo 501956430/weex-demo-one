@@ -1,0 +1,115 @@
+<template>
+    <div class="wrapper">
+        <!--<wxc-navpage title="首页" background-color="#3683FF" title-color="#FF0000"></wxc-navpage>-->
+        <div class="nav_bar" data-role="navbar">
+        <text class="nav_title" style="color: {{leftcolor}};" navi-item-position="left">left</text>
+        <text class="nav_title" style="color: {{centercolor}};" navi-item-position="center">center</text>
+        <text class="nav_title" style="color: {{rightcolor}};" navi-item-position="right">right</text>
+        </div>
+        <list class="list">
+            <cell onappear="onappear" ondisappear="ondisappear" class="row" repeat="{{rows}}" index="{{$index}}">
+                <div class="item">
+                    <text class="item-title">row {{id}}</text>
+                </div>
+            </cell>
+
+        </list>
+    </div>
+</template>
+
+<style>
+    .nav_bar {
+        background-color: rgba(0, 0, 0, 0.3);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 99px;
+    }
+
+    .nav_title {
+        color: #eee;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .item {
+        justify-content: center;
+        border-bottom-width: 2;
+        border-bottom-color: #c0c0c0;
+        height: 100;
+        padding:20;
+    }
+    .wrapper { 
+        width: 750; 
+        /*position: absolute; */
+        /*top: 0; */
+        /*left: 0; */
+        /*right: 0; */
+        /*bottom: 0;*/
+        /*align-items: center; */
+        /*justify-content: center;*/
+    }
+    .text {
+        font-size:60; 
+        font-weight: bold; 
+        font-family: "Open Sans", sans-serif;
+    }
+</style>
+
+<script>
+    require('weex-components');
+    module.exports = {
+        data: {
+            rows:[
+                {id: 1},
+                {id: 2},
+                {id: 3},
+                {id: 4},
+                {id: 5},
+                {id: 6},
+                {id: 7},
+                {id: 8},
+                {id: 9},
+                {id: 10},
+                {id: 11},
+                {id: 12},
+                {id: 13},
+                {id: 14},
+                {id: 15},
+                {id: 16},
+                {id: 17},
+                {id: 18},
+                {id: 19},
+                {id: 20},
+                {id: 21},
+                {id: 22},
+                {id: 23},
+                {id: 24},
+                {id: 25},
+                {id: 26},
+                {id: 27},
+                {id: 28},
+                {id: 29}
+            ],
+            color: '#ff0000',
+            text: '',
+        },
+        created: function() {
+            var bundleUrl = this.$getConfig().bundleUrl;
+            nativeLog('bundleUrl = ' + bundleUrl);
+
+            if (bundleUrl.indexOf("tab1") > 0){
+                this.color = '#ff0000';
+                this.text = 'This is Tab 1 Test.';
+            }
+            else if (bundleUrl.indexOf("tab2") > 0){
+                this.color = '#00ff00';
+                this.text = 'This is Tab 2 Test.';
+            } 
+            else if (bundleUrl.indexOf("tab3") > 0){
+                this.color = '#0000ff';
+                this.text = 'This is Tab 3 Test.';
+            } 
+        }
+    }
+</script>
