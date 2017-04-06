@@ -19,12 +19,6 @@
 </div>
 </template>
 <style>
-  .indicator {
-    height: 40;
-    width: 40;
-    color:#45b5f0;
-  }
-
   .refresh-arrow {
     font-size: 30px;
     color: #45b5f0;
