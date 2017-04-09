@@ -1,22 +1,28 @@
 <template>
   <div>
       <!--<wxc-navpage title="首页" background-color="#3683FF" onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF"></wxc-navpage>-->
-    <div class="nav_bar">
-          <text class="nav_title {{sliderIndex==0?'underline':'line0'}}" style="margin-right: 130"  navi-item-position="left">珅美</text>
-          <text class="nav_title {{sliderIndex==1?'underline':'line0'}}"  style="font-size: 36; "  navi-item-position="center">言情</text>
-          <text class="nav_title {{sliderIndex==2?'underline':'line0'}}"  style="margin-left: 130" navi-item-position="right">同人</text>
+     <div>
+
+     <div class="nav_bar">
+          <text class="nav_title {{sliderIndex==0?'underline':'line0'}}" style="flex: 1;"  navi-item-position="left">珅美</text>
+          <text class="nav_title {{sliderIndex==1?'underline':'line0'}}" style="flex: 1;" navi-item-position="center">言情</text>
+          <text class="nav_title {{sliderIndex==2?'underline':'line0'}}"  style="flex: 1;" navi-item-position="right">同人</text>
     </div>
-    <slider class="slider" onchange="changes">
+    <div style="height: 4px;">
+            <div style="width: 80px;height: 4px;margin-left:{{progress}}; background-color:hotpink"></div>
+         </div>
+     </div>
+    <slider class="slider" onchange="changes"  onscroll="onscroll" index="{{sliderIndex}}" offset-x-accuracy="0.01">
       <div repeat="{{img in imageList}}">
           <scroller class="scroller" show-scrollbar="false">
-              <refresh  class = "refresh-view" display="{{refresh_display}}" onrefresh="onrefresh">
+              <refresh  class = "refresh-view" display="{{refresh_display}}" index="{{$index}}"  onrefresh="onrefresh">
                   <text if="{{(refresh_display==='hide')}}"> ↓ pull to refresh </text>
                   <loading-indicator class="indicator"></loading-indicator>
               </refresh>
               <div class="row" repeat="{{item in rows}}" >
                  <text class="text">{{item}}</text>
               </div>
-              <loading class="loading-view" display="{{loading_display}}" onloading="onloading">
+              <loading class="loading-view" display="{{loading_display}}" index="{{$index}}"  onloading="onloading">
                   <text if="{{(loading_display==='hide')}}">↑ Loadmore </text>
                   <loading-indicator class="indicator"></loading-indicator>
               </loading>
@@ -54,9 +60,6 @@
         align-items: center;
     }
     .underline{
-        border-bottom-width: 4;
-        border-bottom-color: hotpink;
-        border-bottom-style: solid;
         color: hotpink;
     }
     .line0{
@@ -155,10 +158,23 @@
          }else if(e.index ==0){
              this.leftcolor='#ggggg';
          }
-      }
+         this.goto(parseInt(e.index));
+      },
+      goto:function(i) {
+              this.sliderIndex = i;
+              this.progress = i * 249+90;
+            },
+            onscroll:function(e) {
+              var ratio = parseFloat(e.offsetXRatio);
+              this.progress = 249 * this.sliderIndex + (249 * -ratio)+90;
+            },
+            onchange:function(e) {
+              this.goto(parseInt(e.index));
+            }
     },
 
     data: {
+    progress: 90,
         moreRows: [
             {id: 30},
             {id: 31},
@@ -171,7 +187,7 @@
         sliderIndex:0,
       rightcolor:'#eee',
       centercolor:'#eee',
-      text:'no',
+      text:0,
       leftcolor:'hotpink',
       eventCnt: 0,
       imageList: [1,2,3],
