@@ -1,9 +1,9 @@
 {
-   "AppName":"WeexApp",
-   "Version":"0.1",
-   "BuildVersion":"0.1.0",
-   "AppId":"",
-   "CodeSign":"",
-   "Profile":"",
-   "WeexBundle":"tabbar.js"
+    "AppName": "WeexApp",
+    "Version": "0.1",
+    "BuildVersion": "0.1.0",
+    "AppId": "com.taobao.weextest",
+    "CodeSign": "",
+    "Profile": "",
+    "WeexBundle": "tabbar.js"
 }
