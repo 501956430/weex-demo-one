@@ -1,6 +1,5 @@
 <template>
-<div>
-    <wxc-navpage title="首页" background-color="#3683FF"  onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF"></wxc-navpage>
+    <wxc-navpage data-role="none" height={{navBarHeight}}  title="首页" background-color="#3683FF"  onclick="onClickTitle" title-color="#FF0000" left-item-title="搜索" left-item-color="#EA80FF" right-item-title="跳转" right-item-color="#EA80FF">
     <list style="margin-top: {{height}};">
           <refresh  class = "refresh-view" display="{{refresh_display}}" onrefresh="onrefresh">
             <text if="{{(refresh_display==='hide')}}"> ↓ pull to refresh </text>
@@ -16,7 +15,7 @@
             <loading-indicator class="indicator"></loading-indicator>
           </loading>
         </list>
-</div>
+</wxc-navpage>
 </template>
 <style>
   .refresh-arrow {
@@ -70,6 +69,15 @@
 require('weex-components');
 var modal = require('@weex-module/modal');
   module.exports = {
+  created:function() {
+            var config = this.$getConfig();
+                        var env = config.env;
+                        if(env.platform == 'iOS'){
+                            var scale = env.scale;
+                            var deviceWidth = env.deviceWidth / scale;
+                            this.navBarHeight = 64.0 * 750.0 / deviceWidth;
+                        }
+          },
     methods: {
         ready: function(){
             var config = this.$getConfig();
@@ -131,6 +139,7 @@ var modal = require('@weex-module/modal');
       },
     },
     data: {
+    navBarHeight:'88',
         height:'0',
       refresh_display: 'hide',
       loading_display: 'hide',

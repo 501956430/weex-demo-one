@@ -1,6 +1,5 @@
 <template>
-    <div>
-    <wxc-navpage title="{{header}}" background-color="#3683FF" title-color="#FF0000" ></wxc-navpage>
+    <wxc-navpage data-role="none" height={{navBarHeight}} title="{{header}}" background-color="#3683FF" title-color="#FF0000" >
     <div class="wrapper">
                 <div class="avatar-backimg">
                     <image src="http://ww1.sinaimg.cn/large/0060lm7Tgw1fb48l87oupj304g04gq2t.jpg" class="avatar-gussi"></image>
@@ -20,7 +19,7 @@
                     <image style="width: 45;height: 45;left: 300;position: absolute;bottom: 25;left:640;" src="http://onnqn1z06.bkt.clouddn.com/image/right.png?e=1490930813&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:--Zd94vFWDHaEstMVnhRYF-GXV8"></image>
                 </div>
             </div>
-    </div>
+    </wxc-navpage>
 </template>
 <style>
 
@@ -81,6 +80,7 @@
     require('weex-components');
     module.exports = {
         data: {
+            navBarHeight:'88',
             header: '我的',
             text: 'Hello word',
             imgs:'http://p1.bpimg.com/1949/8fb079ae1263fa83.jpg',
@@ -91,6 +91,13 @@
             bundleUrl= bundleUrl.substring(0,bundleUrl.lastIndexOf("/")+1);
             this.paths=bundleUrl;
             //this.imgs=bundleUrl+"right.png";
+            var config = this.$getConfig();
+                                    var env = config.env;
+                                    if(env.platform == 'iOS'){
+                                        var scale = env.scale;
+                                        var deviceWidth = env.deviceWidth / scale;
+                                        this.navBarHeight = 64.0 * 750.0 / deviceWidth;
+                                    }
         },methods:{
             onload:function (target,e) {
                 var self = this;
