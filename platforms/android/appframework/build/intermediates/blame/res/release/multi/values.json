@@ -1,6 +1,10 @@
 [
     {
-        "outputFile": "C:\\Users\\tangbo.JHH\\WebstormProjects\\demo1\\platforms\\android\\appframework\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\budao\\app-framework-android\\bin\\templates\\appframework\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "map": []
+    },
+    {
+        "outputFile": "C:\\Users\\tangbo.JHH\\WebstormProjects\\weex-demo-one\\platforms\\android\\appframework\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
         "map": []
     }
 ]

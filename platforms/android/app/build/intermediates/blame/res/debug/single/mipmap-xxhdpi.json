@@ -1,6 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\tangbo.JHH\\WebstormProjects\\demo1\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\tangbo.JHH\\WebstormProjects\\demo1\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\tangbo.JHH\\WebstormProjects\\weex-demo-one\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\tangbo.JHH\\WebstormProjects\\weex-demo-one\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\budao\\app-framework-android\\bin\\templates\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\budao\\app-framework-android\\bin\\templates\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\budao\\weex-pack\\generator\\platforms\\templates\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\budao\\weex-pack\\generator\\platforms\\templates\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

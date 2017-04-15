@@ -19,7 +19,7 @@ You can tell lint (and other tools) which language is the default language in yo
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~"
         quickfix="adt">
         <location
-            file="C:\Users\tangbo.JHH\WebstormProjects\demo1\platforms\android\app\src\main\res\values\strings.xml"
+            file="C:\Users\tangbo.JHH\WebstormProjects\weex-demo-one\platforms\android\app\src\main\res\values\strings.xml"
             line="3"
             column="13"/>
     </issue>
@@ -42,7 +42,7 @@ You can tell lint (and other tools) which language is the default language in yo
         errorLine2="            ~~~~~~~~~~~~~~~~"
         quickfix="adt">
         <location
-            file="C:\Users\tangbo.JHH\WebstormProjects\demo1\platforms\android\app\src\main\res\values\strings.xml"
+            file="C:\Users\tangbo.JHH\WebstormProjects\weex-demo-one\platforms\android\app\src\main\res\values\strings.xml"
             line="9"
             column="13"/>
     </issue>
@@ -65,7 +65,7 @@ You can tell lint (and other tools) which language is the default language in yo
         errorLine2="            ~~~~~~~~~~~~~~~~~~~"
         quickfix="adt">
         <location
-            file="C:\Users\tangbo.JHH\WebstormProjects\demo1\platforms\android\app\src\main\res\values\strings.xml"
+            file="C:\Users\tangbo.JHH\WebstormProjects\weex-demo-one\platforms\android\app\src\main\res\values\strings.xml"
             line="13"
             column="13"/>
     </issue>
@@ -88,7 +88,7 @@ You can tell lint (and other tools) which language is the default language in yo
         errorLine2="            ~~~~~~~~~~~~~~~~~~~"
         quickfix="adt">
         <location
-            file="C:\Users\tangbo.JHH\WebstormProjects\demo1\platforms\android\app\src\main\res\values\strings.xml"
+            file="C:\Users\tangbo.JHH\WebstormProjects\weex-demo-one\platforms\android\app\src\main\res\values\strings.xml"
             line="14"
             column="13"/>
     </issue>
