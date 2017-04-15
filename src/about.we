@@ -1,10 +1,8 @@
 <template>
-    <wxc-navpage  left-item-src="http://onnqn1z06.bkt.clouddn.com/image/back-white.png?e=1491043029&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:xZ5AeUoLHDD-ji4JuU1NbRHpq-c" title="{{header}}" background-color="#3683FF" title-color="#FF0000">
-        <div class="wrapper">
+    <wxc-navpage  data-role="none" height={{navBarHeight}}  left-item-src="http://onnqn1z06.bkt.clouddn.com/image/back-white.png?e=1491043029&token=xVryS37zuyzHbLZ58HkM0pxVO4YXKShnVUJpNrM9:xZ5AeUoLHDD-ji4JuU1NbRHpq-c" title="{{header}}" background-color="#3683FF" title-color="#FF0000">
         <div style="padding-left: 50;padding-right: 50">
          <text>{{text}}</text>
-     </div>
-            </div>
+         </div>
     </wxc-navpage>
 </template>
 
@@ -17,6 +15,7 @@
     var navigator = require('@weex-module/navigator');
     module.exports = {
         data: {
+            navBarHeight:'',
             header: '关于',
             text: '关于我们hi十多个了看看老人家了看过豆腐干会计东风路开个机都了解到了看过来看了肯德基了广阔的金服管理快递费' +
             '寄过来看到过讲道理开个讲鬼地方了开关机了的看法较高的卢浮宫剪短发了开关机东立国际电饭锅来得及概率的管理道理开个京东' +
@@ -24,7 +23,13 @@
         },
         created:function() {
             var self = this;
-
+            var config = self.$getConfig();
+            var env = config.env;
+            if(env.platform == 'iOS'){
+                var scale = env.scale;
+                var deviceWidth = env.deviceWidth / scale;
+                this.navBarHeight = 64.0 * 750.0 / deviceWidth;
+            }
             self.$on('naviBar.leftItem.click',function(e){
                 navigator.pop({},function () {
                 });
